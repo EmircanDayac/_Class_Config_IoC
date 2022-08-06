@@ -1,6 +1,7 @@
+import org.springframework.beans.factory.annotation.Value;
 
 public class OracleDal implements IDal{
-
+	@Value("${database.connectionString}")
 String connectionString;
 	
 	public String getConnectionString() {
