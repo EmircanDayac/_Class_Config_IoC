@@ -11,5 +11,9 @@ public class Class_Config {
 		return new MySqlDal();
 		
 	}
-
+	@Bean
+	public ICustomerService service() {
+		return new CustomerManager(database());
+		
+	}
 }
